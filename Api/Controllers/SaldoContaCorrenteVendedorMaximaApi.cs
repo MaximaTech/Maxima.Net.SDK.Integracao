@@ -1,0 +1,18 @@
+using System.Collections.Generic;
+using Maxima.Net.SDK.Integracao.Abastractions;
+using Maxima.Net.SDK.Integracao.Entidades;
+
+namespace Maxima.Net.SDK.Integracao.Api.Controllers
+{
+    internal class SaldoContaCorrenteVendedorMaximaApi : ApiBase<SaldoContaCorrenteVendedorMaxima>
+    {
+        override public string VersaoAPI { get; set; } = SaldoContaCorrenteVendedorMaxima.VersaoAPI;
+        override public string EndPoint { get; set; } = SaldoContaCorrenteVendedorMaxima.EndPoint;
+        public SaldoContaCorrenteVendedorMaximaApi(IApiMaxima apiMaxima) : base(apiMaxima) { }
+
+        internal override void DefinirCamposDefault(List<SaldoContaCorrenteVendedorMaxima> list)
+        {
+
+        }
+    }
+}
